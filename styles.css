@@ -1,0 +1,226 @@
+/* Негізгі стильдер */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Контейнер */
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    animation: gradientBackground 10s ease infinite;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://example.com/waves.png');
+    background-size: cover;
+    opacity: 0.2;
+    animation: waveEffect 20s infinite linear;
+}
+
+/* От шашулар */
+.fireworks-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://example.com/fireworks.gif');
+    background-size: cover;
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Басты мәтіндер */
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    animation: fadeInUp 2s ease-out;
+}
+
+.hero-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 15px rgba(255, 255, 0, 0.7);
+    animation: flickerText 3s infinite alternate;
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: fadeInUp 3s ease-in;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(255, 99, 71, 0.7);
+    transition: transform 0.3s ease;
+    animation: buttonPulse 2s infinite;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+}
+
+/* Мерекелік мәліметтер */
+.details-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #222;
+}
+
+.details-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #ffd700;
+}
+
+.info-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-box p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Пікірлер */
+.comment-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #1b1b1b;
+}
+
+.comment-box {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-box input,
+.comment-box textarea {
+    padding: 15px;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+.comment-box button {
+    padding: 15px;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.comment-box button:hover {
+    background-color: #ff4500;
+    transform: translateY(-5px);
+}
+
+/* Аяқтау */
+footer {
+    padding: 20px;
+    background-color: #1c1c1c;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Анимациялар */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes waveEffect {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flickerText {
+    0% {
+        opacity: 1;
+        text-shadow: 2px 2px 10px rgba(255, 255, 0, 0.9);
+    }
+    100% {
+        opacity: 0.7;
+        text-shadow: none;
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
